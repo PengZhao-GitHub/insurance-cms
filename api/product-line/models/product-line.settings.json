@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "product_lines",
+  "info": {
+    "name": "product-line"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "logo": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "insurers": {
+      "collection": "insurer",
+      "via": "product_lines",
+      "dominant": true
+    },
+    "products": {
+      "via": "product_line",
+      "collection": "product"
+    }
+  }
+}

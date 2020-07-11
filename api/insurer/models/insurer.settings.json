@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "insurers",
+  "info": {
+    "name": "insurer"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "logo": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "product_lines": {
+      "via": "insurers",
+      "collection": "product-line"
+    },
+    "products": {
+      "via": "insurer",
+      "collection": "product"
+    }
+  }
+}
