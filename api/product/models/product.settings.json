@@ -40,6 +40,9 @@
     "product_line": {
       "model": "product-line",
       "via": "products"
+    },
+    "url": {
+      "type": "string"
     }
   }
 }
