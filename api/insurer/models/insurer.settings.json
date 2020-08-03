@@ -36,6 +36,10 @@
     "products": {
       "via": "insurer",
       "collection": "product"
+    },
+    "showcases": {
+      "via": "insurer",
+      "collection": "showcase"
     }
   }
 }

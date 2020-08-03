@@ -31,6 +31,14 @@
       ],
       "plugin": "upload",
       "required": false
+    },
+    "product_line": {
+      "model": "product-line",
+      "via": "showcases"
+    },
+    "insurer": {
+      "model": "insurer",
+      "via": "showcases"
     }
   }
 }

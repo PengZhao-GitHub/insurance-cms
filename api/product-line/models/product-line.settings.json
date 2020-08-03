@@ -37,6 +37,10 @@
     "products": {
       "via": "product_line",
       "collection": "product"
+    },
+    "showcases": {
+      "via": "product_line",
+      "collection": "showcase"
     }
   }
 }

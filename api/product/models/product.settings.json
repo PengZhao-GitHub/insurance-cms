@@ -43,6 +43,9 @@
     },
     "url": {
       "type": "string"
+    },
+    "product_spec": {
+      "type": "json"
     }
   }
 }
